@@ -1,8 +1,8 @@
 # Miso's Little Guide — Documentation
 
-A quick guide for modpack creators. **You don't need Java.** Your guide is made from JSON files, PNGs and OGG sounds.
+A quick guide for modpack creators.
 
-Miso's Little Guide is an onboarding mod for **Minecraft Forge 1.20.1**, Forge **47.4+**, Java **17**. When someone joins a world for the first time, a mascot appears in a speech bubble above the hotbar and walks them through your modpack.
+Miso's Little Guide is an onboarding mod. When someone joins a world for the first time, a mascot appears in a speech bubble above the hotbar and walks them through your modpack.
 
 You can change the mascot, dialogue, buttons, themes, sounds, starter gifts and chat links.
 
