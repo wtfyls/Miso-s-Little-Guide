@@ -38,5 +38,5 @@
 
 <h3>Issues &amp; Suggestions</h3>
 <p>Found something broken? <a href="https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=bug.yml">Open a ticket on GitHub</a>.</p>
-<p>Have an idea for the guide or guide packs? <a href="https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=bug.yml?template=guide_request.yml">Send a suggestion</a>.</p>
+<p>Have an idea for the guide or guide packs? <a href="https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=guide_request.yml">Send a suggestion</a>.</p>
 <p>Check existing tickets before opening a new one.</p>
