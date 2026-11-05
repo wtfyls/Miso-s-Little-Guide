@@ -3,40 +3,40 @@
 <h1>Miso's Little Guide</h1>
 
 <p>
-  <a href="https://www.curseforge.com/minecraft/mc-mods/misos-little-guide"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/curseforgelarge.png" alt="Download on CurseForge" height="48"></a>
+  <a href="https://www.curseforge.com/minecraft/mc-mods/misos-little-guide"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/curseforgelarge.png" alt="CurseForge" height="48"></a>
   &nbsp;
-  <a href="https://discord.gg/68yhDdFpnx"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/discordlarge.png" alt="Join the Lunchtime Discord" height="48"></a>
+  <a href="https://discord.gg/68yhDdFpnx"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/discordlarge.png" alt="Discord" height="48"></a>
   &nbsp;
-  <a href="https://www.patreon.com/cw/Fierolam"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/patreonlarge.png" alt="Support Lunchtime on Patreon" height="48"></a>
+  <a href="https://www.patreon.com/cw/Fierolam"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/patreonlarge.png" alt="Patreon" height="48"></a>
   &nbsp;
-  <a href="https://www.instagram.com/lunchbutt/"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/instagramlarge.png" alt="Follow on Instagram" height="48"></a>
+  <a href="https://www.instagram.com/lunchbutt/"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/instagramlarge.png" alt="Instagram" height="48"></a>
   &nbsp;
-  <a href="https://www.tiktok.com/@lunchbutt"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/tiktoklarge.png" alt="Follow on TikTok" height="48"></a>
+  <a href="https://www.tiktok.com/@lunchbutt"><img src="https://raw.githubusercontent.com/wtfyls/Lunchtime-Cozy-Create-Farming/main/assets/tiktoklarge.png" alt="TikTok" height="48"></a>
 </p>
 
-<p>Want your modpack to feel a little more alive? Miso's Little Guide lets you make your own welcome screens, tutorials, conversations and little character moments for players.</p>
+<p>Miso's Little Guide adds a welcome guide that modpack creators can customize for their players. Set up pages of dialogue, add a mascot, and give players buttons for menus, links and other actions.</p>
 
-<p>Miso is the default mascot, but you can replace her with your own character and customize the whole guide without having to change the mod's code.</p>
-
-<h3>What you can make</h3>
+<h3>What it includes</h3>
 <ul>
-  <li>Welcome screens and tutorials.</li>
-  <li>Custom mascots, expressions and themes.</li>
-  <li>Dialogue, buttons, sounds and animations.</li>
-  <li>Your own guide packs for different modpacks.</li>
+  <li>Welcome messages and tutorial pages.</li>
+  <li>Custom mascots, expressions and animations.</li>
+  <li>Dialogue, buttons, menu shortcuts and keybind text.</li>
+  <li>Custom themes, colors and layout options.</li>
+  <li>Sounds and optional chat links.</li>
+  <li>Optional starter gifts for players.</li>
+  <li>Guide packs that can be edited with JSON files without changing Java code.</li>
 </ul>
 
 <h3>Getting Started</h3>
 <ol>
   <li>Install the mod and launch Minecraft once.</li>
-  <li>Open the guide-pack folder created by the mod.</li>
-  <li>Use the included example or make your own guide pack.</li>
-  <li>Add your mascot, pages, dialogue and assets, then launch the game to test it.</li>
+  <li>Open <code>config/misos_guide/guidepacks/</code>.</li>
+  <li>Edit the included example guide pack or create your own.</li>
+  <li>Run <code>/miso reload</code> and <code>/miso preview</code> to test your changes.</li>
 </ol>
 
-<p>For the folder structure, available options and setup details, see the <a href="documentation.md">documentation</a>.</p>
+<p>The <a href="documentation.md">documentation</a> explains the guide-pack files, page options, mascots, themes, buttons, rewards and commands.</p>
 
 <h3>Issues &amp; Suggestions</h3>
-<p>Found something broken? <a href="https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=bug.yml">Open a ticket on GitHub</a>.</p>
-<p>Have an idea for the guide or guide packs? <a href="https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=guide_request.yml">Send a suggestion</a>.</p>
-<p>Check existing tickets before opening a new one.</p>
+<p>Found a bug? <a href="https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=bug.yml">Report it here</a>.</p>
+<p>Have an idea for a feature or guide-pack option? <a href="https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=guide_request.yml">Send a suggestion</a>.</p>
