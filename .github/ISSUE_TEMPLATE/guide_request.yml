@@ -1,0 +1,17 @@
+name: Guide pack or feature suggestion
+description: Suggest a feature or something that would make guide packs easier to create.
+title: "[Suggestion]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to add or change?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would it be useful?
+    validations:
+      required: true
