@@ -14,7 +14,16 @@ Miso's Little Guide lets you make a welcome guide for your modpack: dialogue, a 
 
 Can't find your instance folder? In CurseForge, right-click the profile and choose **Open Folder**. In Prism Launcher or MultiMC, choose **Folder**.
 
-## 2. Where everything goes
+## 2. What happens in-game?
+
+- The intro starts about two seconds after a player enters a world for the first time.
+- Progress is saved in `.misos_guide/client_progress.json` in that Minecraft instance, so the intro won't keep popping up.
+- **Enter / Space** moves through dialogue. **Escape** pauses the guide.
+- Press **H** (rebindable) or use `/miso` to continue. Use `/miso replay` to start again.
+- Pages can open supported menus. The guide hides while the menu is open and resumes on the same page when it closes.
+- The guide works client-side in single-player and multiplayer. For server welcome gifts, the mod must also be installed on the server.
+
+## 3. Where everything goes
 
 After the first launch, the folder should look like this:
 
@@ -45,7 +54,7 @@ config/misos_guide/
 
 Your guide-pack files are not overwritten when Minecraft restarts or the mod updates.
 
-## 3. Make your own guide pack
+## 4. Make your own guide pack
 
 You can either edit the example or export a fresh pack:
 
@@ -66,7 +75,7 @@ The value must match the `"id"` in your pack's `pack.json`.
 
 **Keep the pack ID the same after publishing.** It's used to remember who has already seen the guide. You can change the pack's `version` when you update it.
 
-## 4. Write your pages
+## 5. Write your pages
 
 Edit `pages.json`. Pages appear in order, and each page needs its own unique `id`.
 
@@ -118,7 +127,22 @@ You can find key names in the instance's `options.txt`. Copy the name after `key
 
 Built-in shortcuts include `{key:inventory}`, `{key:quests}`, `{key:skills}`, `{key:fieldguide}`, `{key:cookbook}`, `{key:map}`, `{key:claims}` and `{key:guide}`.
 
-## 5. Change the mascot and look
+A few extra page fields you might need:
+
+| Field | What it does |
+|---|---|
+| `character` / `mascot` | Choose which mascot speaks. |
+| `showName` | Set `false` to hide the mascot's name. |
+| `image` | Show a PNG instead of the mascot for that page. |
+| `cardTitle`, `actionKey`, `targetMenu` | Show a menu card with the player's current keybind. |
+| `sound`, `typingSound` | Change the page or typing sound. |
+| `theme` | Use a different theme on this page. |
+
+Item icons use `{ "type": "item", "id": "minecraft:wheat" }`. Custom icons use `{ "type": "image", "path": "assets/icons/star.png" }`.
+
+Supported menu targets include `inventory`, `quests`, `skills`, `cookbook` and `fieldguide`. The relevant mod or menu needs to be installed.
+
+## 6. Change the mascot and look
 
 Put transparent PNGs in `assets/mascot/`. Keep paths relative to your guide-pack folder. Images can be up to 2048 × 2048 and 10 MB.
 
@@ -171,7 +195,7 @@ Set one in `pack.json`:
 
 You can override individual colors and layout values in `pack.json`. Keep the preset and only change what you need.
 
-## 6. Add buttons and conditions
+## 7. Add buttons and conditions
 
 Pages have **Skip** and **Continue** buttons by default. You can add your own buttons in a page:
 
@@ -201,15 +225,60 @@ Other condition types include `item_exists`, `rewards_available`, `not`, `and` a
 
 Supported menu targets include `inventory`, `quests`, `skills`, `cookbook` and `fieldguide`. The relevant mod or menu needs to be installed.
 
-## 7. Sounds, starter gifts and chat links
+## 8. Sounds, starter gifts and chat links
 
 - Put custom OGG Vorbis sounds in `assets/sounds/`. Keep each file under 2 MB.
 - Add optional starter items in `rewards.json`. Gifts are given by the server, once per player per world.
 - Add optional clickable community links in `chat_messages.json`. Players can see them after the guide or with `/miso links`.
 
+Example `rewards.json`:
+
+```json
+{
+  "enabled": true,
+  "trigger": "finish_or_skip",
+  "oneTime": true,
+  "rewards": [
+    { "item": "minecraft:bread", "count": 5 },
+    {
+      "item": "numismatics:spur",
+      "count": 8,
+      "condition": { "type": "mod_loaded", "modid": "numismatics" }
+    }
+  ]
+}
+```
+
+Set `trigger` to `finish` if skipping should not give the gift. Set `enabled` to `false` to turn gifts off.
+
+Example `chat_messages.json`:
+
+```json
+{
+  "enabled": true,
+  "messages": [
+    {
+      "id": "community",
+      "trigger": "finish",
+      "once": true,
+      "lines": [
+        [{ "text": "Thanks for playing!" }],
+        [{
+          "text": "[Join our Discord]",
+          "url": "https://discord.gg/your-invite",
+          "hoverText": "Come hang out with us"
+        }]
+      ]
+    }
+  ]
+}
+```
+
+Triggers can be `finish`, `skip`, `finish_or_skip` or `manual`. Manual messages appear with `/miso links`.
+
 For multiplayer starter gifts, install the mod on the server and copy the guide pack into the server's `config/misos_guide/guidepacks/` folder too.
 
-## 8. Commands
+## 9. Commands
 
 | Command | What it does |
 |---|---|
@@ -226,7 +295,7 @@ For multiplayer starter gifts, install the mod on the server and copy the guide 
 
 **Quick testing loop:** edit a file → `/miso reload` → `/miso preview`. Run `/miso validate` if something looks wrong.
 
-## 9. Before you add it to your modpack
+## 10. Before you add it to your modpack
 
 - [ ] Include the mod JAR in `mods/`.
 - [ ] Include `config/misos_guide/` and your guide pack.
@@ -235,7 +304,7 @@ For multiplayer starter gifts, install the mod on the server and copy the guide 
 
 **Don't include `.misos_guide/` from your instance folder.** That's where local player progress is stored. Including it can make players look like they've already seen the intro.
 
-## 10. Quick fixes
+## 11. Quick fixes
 
 | Problem | Try this |
 |---|---|
