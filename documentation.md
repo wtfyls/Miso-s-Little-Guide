@@ -316,7 +316,7 @@ For multiplayer starter gifts, install the mod on the server and copy the guide 
 | Server gifts don't work | Install the mod on the server and copy the guide pack to its config folder. |
 | A sound won't play | Use an OGG Vorbis file, not an MP3 or WAV renamed to `.ogg`. |
 
-Still stuck? [Open a GitHub ticket](https://github.com/wtfyls/Miso-s-Little-Guide/issues/new) and include your Minecraft version, mod version and logs.
+Still stuck? [Report a bug](https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=bug.yml) and include your Minecraft version, mod version and logs. Have an idea? [Suggest a guide feature](https://github.com/wtfyls/Miso-s-Little-Guide/issues/new?template=guide_request.yml).
 
 ---
 
