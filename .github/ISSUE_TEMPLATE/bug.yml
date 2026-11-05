@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a problem with the guide.
+title: "Bug: "
+labels:
+  - bug
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Minecraft and mod version
+      placeholder: "Minecraft 1.20.1 / mod version"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Tell me what went wrong and how to reproduce it.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Add a link if you have one.
+    validations:
+      required: false
